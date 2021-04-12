@@ -1,6 +1,13 @@
 # nanoscrape
 a simple scraping program that can download webpages, discord embeds, and more.
 
+## TOC
+
+- [current capabilities](#current-capabilities)
+- [run nanoscrape](#run-nanoscrape)
+- [usage](#usage)
+
+
 ## current capabilities
 
 - can download discord embed links
@@ -23,3 +30,8 @@ type this command and press enter:
 `python nanoscrape.py`
 
 if you do not see an error, you are good to go!
+
+------------
+
+## usage
+
