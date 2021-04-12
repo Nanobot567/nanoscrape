@@ -155,7 +155,7 @@ print('Welcome to...')
 print("""
 
         nanoscrape.py
-         version 1.4
+         version 1.0
         
 
 """)
