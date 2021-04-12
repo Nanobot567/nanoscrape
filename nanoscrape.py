@@ -1,3 +1,7 @@
+# nanoscrape 1.4
+# by nanobot567
+# started work on april 7, 2021
+
 
 try:
     print("Importing assets...")
@@ -42,25 +46,32 @@ def disLinkExt():
     if "https://" in x:
         
         url = x
-        r = requests.get(url)
-        m = input("What is the file extension (.zip, .exe, etc.)? ")
-        if "." in m:
-            ext = m
-            print(ext)
-            l = input("Where would you like this to be stored (please put double backslashes like C:\\\\ if you are on windows)? ")
-            path = l
-            s = input("What is this file going to be called (without extension)? ")
-            name = s
-            print("Alright, downloading...")
-            try:
-                with open(f'{path}{name}{ext}', 'wb') as f:
-                    f.write(r.content)
+        try:
+            r = requests.get(url)
+            m = input("What is the file extension (.zip, .exe, etc.)? ")
+            if "." in m:
+                ext = m
+                l = input("Where would you like this to be stored (please put double backslashes like C:\\\\ if you are on windows)? ")
+                path = l
+                s = input("What is this file going to be called (without extension)? ")
+                name = s
+                print("Alright, downloading...")
+                try:
+                    with open(f'{path}{name}{ext}', 'wb') as f:
+                        f.write(r.content)
 
-                print(f"status_code: {r.status_code}")
-                print(f"type: {r.headers['content-type']}")
-                print(f"encoding: {r.encoding}")
-            except Exception as e:
-                print(f"Something went wrong! Please try again. (Error: {str(e)})")
+                    print(f"status_code: {r.status_code}")
+                    print(f"type: {r.headers['content-type']}")
+                    print(f"encoding: {r.encoding}")
+                except Exception as e:
+                    print(f"Something went wrong! Please try again. (Error: {str(e)})")
+        except Exception as e:
+            print(f"Something went wrong! Please try again. (Error: {str(e)})")
+    elif x == "cancel":
+        pass
+    else:
+        print("That is not a valid url! Please try again.")
+
 
 
 def direct():
@@ -70,26 +81,35 @@ def direct():
         
         url = x
         print("Please wait while I check if the link is valid... (this could take several minutes)")
-        r = requests.get(url)
-        m = input("What is the file extension (.zip, .exe, etc.)? ")
-        if "." in m:
-            ext = m
-            print(ext)
-            l = input("Where would you like this to be stored (please put double backslashes like C:\\\\ if you are on windows)? ")
-            path = l
-            s = input("What is this file going to be called (without extension)? ")
-            name = s
-            print("Alright, downloading...")
-            try:
-                with open(f'{path}{name}{ext}', 'wb') as f:
-                    f.write(r.content)
+        try:
+            r = requests.get(url)
+            m = input("What is the file extension (.zip, .exe, etc.)? ")
+        
+            if "." in m:
+                ext = m
+                l = input("Where would you like this to be stored (please put double backslashes like C:\\\\ if you are on windows)? ")
+                path = l
+                s = input("What is this file going to be called (without extension)? ")
+                name = s
+                print("Alright, downloading...")
+                try:
+                    with open(f'{path}{name}{ext}', 'wb') as f:
+                        f.write(r.content)
 
-                print(f"status_code: {r.status_code}")
-                print(f"type: {r.headers['content-type']}")
-                print(f"encoding: {r.encoding}")
-            except Exception as e:
-                print(f"Something went wrong! Please try again. (Error: {str(e)})")
+                    print(f"status_code: {r.status_code}")
+                    print(f"type: {r.headers['content-type']}")
+                    print(f"encoding: {r.encoding}")
+                except Exception as e:
+                    print(f"Something went wrong! Please try again. (Error: {str(e)})")
 
+        except Exception as e:
+            print(f"Something went wrong! Please try again. (Error: {str(e)})")
+    elif x == "cancel":
+        pass
+    else:
+        print("That is not a valid url! Please try again.")
+            
+        
 
 
 def disLinkFind():
@@ -98,31 +118,36 @@ def disLinkFind():
     if "https://" in x:
         
         url = x
-        r = requests.get(url)
-
-        print("Detecting extension...")
-
-        ext = url.split(".",3)[3]
-
-        print(f"I detected that the extension was .{ext}.")
-        
-        l = input("Where would you like this to be stored (please put double backslashes like C:\\\\ if you are on windows)? ")
-        path = l
-        s = input("What is this file going to be called (without extension)? ")
-        name = s
-        print("Alright, downloading...")
         try:
-            with open(f'{path}{name}.{ext}', 'wb') as f:
-                f.write(r.content)
+            r = requests.get(url)
+            print("Detecting extension...")
 
-            print(f"status_code: {r.status_code}")
-            print(f"type: {r.headers['content-type']}")
-            print(f"encoding: {r.encoding}")
-            print("Done!")
-        except:
+            ext = url.split(".",3)[3]
+
+            print(f"I detected that the extension was .{ext}.")
+            
+            l = input("Where would you like this to be stored (please put double backslashes like C:\\\\ if you are on windows)? ")
+            path = l
+            s = input("What is this file going to be called (without extension)? ")
+            name = s
+            print("Alright, downloading...")
+            try:
+                with open(f'{path}{name}.{ext}', 'wb') as f:
+                    f.write(r.content)
+
+                print(f"status_code: {r.status_code}")
+                print(f"type: {r.headers['content-type']}")
+                print(f"encoding: {r.encoding}")
+                print("Done!")
+            except Exception as e:
+                print(f"Something went wrong! Please try again. (Error: {str(e)})")
+
+        except Exception as e:
             print(f"Something went wrong! Please try again. (Error: {str(e)})")
-    
-# http://download.spotify.com/SpotifyFullSetup.exe
+    elif x == "cancel":
+        pass
+    else:
+        print("That is not a valid url! Please try again.")
 
 
 
