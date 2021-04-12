@@ -42,5 +42,46 @@ if you do not see an error, you are good to go!
 
 ## usage
 
+once you have runned nanoscrape, you should be greeted with this message:
+
+```
+Welcome to...
 
 
+        nanoscrape.py
+      version (version)
+        
+
+
+Please select an option.
+
+
+1. Download from a discord link (insert extension)
+2. Download from a discord link (detect extension)
+3. Download from a direct download link
+4. Show this menu
+5. Quit 
+
+
+
+NSCRAPE > 
+```
+- nanoscrape may say that you do not have pip installed. pip is a package manager used to get required modules in nanoscrape. to get pip, you can use a recent curl: `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`. once you have installed pip, run `python get-pip.py` in command prompt or terminal. afterwards, you should be able to run nanoscrape fine.
+
+from here, you can do 1 of 5 things:
+
+```
+1. Download from a discord link (insert extension)
+2. Download from a discord link (detect extension)
+3. Download from a direct download link
+4. Show this menu
+5. Quit 
+```
+
+each option is pretty self explainatory, but some examples of using these commands are:
+
+1. (option 1): "i need to download a discord embed, and i know the file extension used."
+2. (option 2): "i want to use this discord video in a memes channel, but i don't know the file extension."
+3. (option 3): "i want to download this guide to read offline."
+4. (option 4): "what are the options again?"
+5. (option 5): "screw this, i'm leaving."
