@@ -85,3 +85,9 @@ each option is pretty self explainatory, but some examples of using these comman
 3. (option 3): "i want to download this guide to read offline."
 4. (option 4): "what are the options again?"
 5. (option 5): "screw this, i'm leaving."
+
+after typing an option (number 1, 2, 3, 4, or 5), nanoscrape will give you instructions on what to do.
+
+<br>
+
+that is all! create a help request in the issues tab if you need more help.
