@@ -1,4 +1,4 @@
-# nanoscrape 1.4
+# nanoscrape 1.0
 # by nanobot567
 # started work on april 7, 2021
 
