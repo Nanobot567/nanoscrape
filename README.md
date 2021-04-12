@@ -1,3 +1,3 @@
 # nanoscrape
-## A simple scraping program that can download webpages, Discord embeds, and more.
+### A simple scraping program that can download webpages, Discord embeds, and more.
 
